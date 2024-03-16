@@ -185,7 +185,11 @@ const Filter = () => {
         >
           <Grid container alignItems='stretch' spacing='1px'>
             <Grid item xs={12} md>
-              <CardBox>
+              <CardBox
+                sx={{
+                  alignItems: 'flex-start',
+                }}
+              >
                 <Typography
                   variant='subtitle2'
                   fontSize={14}
@@ -202,7 +206,11 @@ const Filter = () => {
               </CardBox>
             </Grid>
             <Grid item xs={12} md>
-              <CardBox>
+              <CardBox
+                sx={{
+                  alignItems: 'flex-start',
+                }}
+              >
                 <Typography
                   variant='subtitle2'
                   fontSize={14}
