@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fubon/static/css/main.4cec2334.css",
-    "main.js": "/fubon/static/js/main.a3995680.js",
+    "main.js": "/fubon/static/js/main.3490c9cd.js",
     "static/js/178.52b5ac95.chunk.js": "/fubon/static/js/178.52b5ac95.chunk.js",
     "static/media/background.svg": "/fubon/static/media/background.94dc6a02b0cd3fa7d47f0d0e231ab5f4.svg",
     "static/media/cover.svg": "/fubon/static/media/cover.3256d6df3be4b95a914966f3cf15f2c6.svg",
@@ -63,11 +63,11 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/fubon/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/fubon/index.html",
     "main.4cec2334.css.map": "/fubon/static/css/main.4cec2334.css.map",
-    "main.a3995680.js.map": "/fubon/static/js/main.a3995680.js.map",
+    "main.3490c9cd.js.map": "/fubon/static/js/main.3490c9cd.js.map",
     "178.52b5ac95.chunk.js.map": "/fubon/static/js/178.52b5ac95.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4cec2334.css",
-    "static/js/main.a3995680.js"
+    "static/js/main.3490c9cd.js"
   ]
 }
