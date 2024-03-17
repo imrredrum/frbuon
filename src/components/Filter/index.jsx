@@ -158,7 +158,7 @@ const Filter = () => {
       setDeparture(prev => {
         let result = prev
         if (!prev.isAfter(newValue, 'date'))
-          result = prev.add(prev.diff(arrivalRef.current, 'day'), 'day')
+          result = newValue.add(prev.diff(arrivalRef.current, 'day'), 'day')
         return result
       })
       setArrival(newValue)
