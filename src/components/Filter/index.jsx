@@ -20,7 +20,7 @@ import {
 } from '@mui/material'
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar'
 import dayjs from 'dayjs'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const Picker = ({ open, handleClose, min, defaultValue, handleChange }) => {
   const pickerRef = useRef(defaultValue)
@@ -138,7 +138,8 @@ const PeopleAmount = ({ amount, min = 0, handleChange }) => (
 
 const Filter = () => {
   const [arrival, setArrival] = useState(dayjs())
-  const [departure, setDeparture] = useState(dayjs().add(1, 'days'))
+  const arrivalRef = useRef(dayjs())
+  const [departure, setDeparture] = useState(dayjs().add(1, 'day'))
   const [adults, setAdults] = useState(2)
   const [children, setChildren] = useState(0)
 
@@ -155,15 +156,20 @@ const Filter = () => {
   const handleChangeDate = dialog => newValue => {
     if (dialog === 'arrival') {
       setDeparture(prev => {
-        if (!prev.isAfter(newValue))
-          return prev.add(prev.diff(arrival, 'days'), 'days')
-        return prev
+        let result = prev
+        if (!prev.isAfter(newValue, 'date'))
+          result = prev.add(prev.diff(arrivalRef.current, 'day'), 'day')
+        return result
       })
       setArrival(newValue)
     } else if (dialog === 'departure') {
       setDeparture(newValue)
     }
   }
+
+  useEffect(() => {
+    arrivalRef.current = arrival
+  }, [arrival])
 
   const handleChangeAmount = setTarget => change => () => {
     setTarget(prev => prev + change)
